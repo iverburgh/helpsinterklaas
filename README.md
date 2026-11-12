@@ -1,0 +1,270 @@
+# 🎁 CoderDojo Scratch: Help Piet de cadeautjes bezorgen!
+
+**Leeftijd:** 8–12 jaar  
+**Duur:** 1,5 uur (90 minuten)  
+**Niveau:** beginner tot gevorderd  
+**Programma:** Scratch 3.0 — Nederlandse interface
+
+> **Over de afbeeldingen:** de afbeeldingen in `afbeeldingen/` zijn nagemaakte, screenshotachtige blokkenoverzichten. Ze laten de Nederlandse bloknamen en de volgorde zien, maar zijn geen letterlijke schermafbeeldingen uit Scratch. De precieze tekst of vorm kan per Scratch-versie iets verschillen.
+
+## Het verhaal
+
+Het is bijna pakjesavond! Piet moet zo veel mogelijk cadeautjes verzamelen. Help Piet door een spel te programmeren waarin hij kan bewegen, cadeautjes oppakt en vallende sneeuwballen ontwijkt.
+
+## Leerdoelen
+
+Na deze opdracht hebben de kinderen geoefend met:
+
+- gebeurtenissen (starten met de groene vlag);
+- herhalen en als-dan;
+- toetsenbordbediening;
+- x- en y-coördinaten;
+- botsingen detecteren;
+- variabelen en score;
+- testen en verbeteren.
+
+## Tijdschema
+
+| Tijd | Onderdeel |
+|---|---|
+| 0–10 min | Introductie en voorbeeldspel |
+| 10–20 min | Achtergrond en sprites kiezen |
+| 20–40 min | Piet besturen |
+| 40–55 min | Cadeautjes verzamelen en score |
+| 55–70 min | Obstakel toevoegen |
+| 70–80 min | Timer en eindscherm |
+| 80–90 min | Testen en presenteren |
+
+---
+
+## 1. Start een nieuw Scratch-project (10 minuten)
+
+1. Open [Scratch](https://scratch.mit.edu/).
+2. Klik op **Creëer**.
+3. Verwijder de kat als je die niet wilt gebruiken.
+4. Kies een winterse achtergrond, bijvoorbeeld een besneeuwd dorp of daken.
+5. Voeg drie sprites toe:
+   - **Piet** (de speler);
+   - **Cadeautje**;
+   - **Sneeuwbal** (het obstakel).
+
+Je mag ook zelf sprites tekenen. Gebruik de namen `Piet`, `Cadeautje` en `Sneeuwbal`, zodat de scripts hieronder makkelijk te volgen zijn.
+
+**Tip voor begeleiders:** laat kinderen eerst een werkende basis maken. Versieren kan tussendoor of aan het einde.
+
+## 2. Laat Piet bewegen (20 minuten)
+
+Klik op de sprite **Piet**. We gaan Piet met de pijltjestoetsen besturen.
+
+### Blokken zoeken
+
+- **Gebeurtenissen:** `wanneer op groene vlag wordt geklikt`
+- **Besturen:** `herhaal voortdurend`, `als ... dan`
+- **Waarnemen:** `toets ... ingedrukt?`
+- **Beweging:** `verander x met ...`, `verander y met ...`
+
+Bouw de blokken zoals hieronder. De vier toetsen krijgen elk hun eigen `als ... dan`-blok binnen `herhaal voortdurend`.
+
+![Nederlandse Scratch-blokken voor Piet bewegen](afbeeldingen/01-beweging.svg)
+
+### Script voor Piet
+
+```text
+wanneer op groene vlag wordt geklikt
+herhaal voortdurend
+    als toets [pijltje rechts] ingedrukt? dan
+        verander x met (5)
+    als toets [pijltje links] ingedrukt? dan
+        verander x met (-5)
+    als toets [pijltje omhoog] ingedrukt? dan
+        verander y met (5)
+    als toets [pijltje omlaag] ingedrukt? dan
+        verander y met (-5)
+```
+
+**Test:** klik op de groene vlag. Kan Piet alle kanten op bewegen?
+
+**Probleemoplossing:**
+- Beweegt Piet niet? Controleer of de scripts bij de sprite Piet staan.
+- Beweegt Piet te snel? Verander `5` in `3`.
+- Beweegt Piet de verkeerde kant op? Controleer de plus- en mintekens.
+
+## 3. Cadeautjes verzamelen en punten verdienen (15 minuten)
+
+Klik op de sprite **Cadeautje**.
+
+### Maak een scorevariabele
+
+1. Klik op **Variabelen**.
+2. Klik op **Maak een variabele**.
+3. Noem de variabele `Score`.
+4. Kies **Voor alle sprites**.
+5. Zet het vinkje bij `Score` aan, zodat de score op het speelveld zichtbaar is.
+
+### Script voor het cadeautje
+
+![Nederlandse Scratch-blokken voor cadeautje en score](afbeeldingen/02-score-cadeau.svg)
+
+```text
+wanneer op groene vlag wordt geklikt
+maak [Score] [0]
+ga naar willekeurige positie
+toon
+herhaal voortdurend
+    als <raak ik [Piet]?> dan
+        verander [Score] met (1)
+        speel geluid [pop] tot einde
+        ga naar willekeurige positie
+```
+
+**Let op:** maak de variabele `Score` maar één keer aan. In dit voorbeeld reset het cadeautje de score bij het starten van het spel.
+
+**Test:** raakt Piet het cadeautje? Dan moet de score met 1 omhooggaan en moet het cadeautje naar een nieuwe plek springen.
+
+**Extra tip:** als het cadeautje te vaak achter elkaar punten geeft, voeg dan na het aanraken heel kort `wacht (0.2) seconden` toe vóór het cadeautje naar een nieuwe positie gaat.
+
+## 4. Voeg een vallende sneeuwbal toe (15 minuten)
+
+Klik op de sprite **Sneeuwbal**. De sneeuwbal valt van boven naar beneden. Raakt hij Piet, dan verliest Piet een punt.
+
+![Nederlandse Scratch-blokken voor een vallende sneeuwbal](afbeeldingen/03-obstakel.svg)
+
+```text
+wanneer op groene vlag wordt geklikt
+ga naar x: (willekeurig) y: (170)
+herhaal voortdurend
+    verander y met (-5)
+    als <raak ik [Piet]?> dan
+        verander [Score] met (-1)
+        ga naar x: (willekeurig) y: (170)
+    als <(y-positie) < (-170)> dan
+        ga naar x: (willekeurig) y: (170)
+```
+
+### Zo bouw je dit script
+
+- Gebruik bij **Beweging** `verander y met (-5)`.
+- Gebruik bij **Waarnemen** `raak ik [Piet]?`.
+- Gebruik bij **Variabelen** `verander [Score] met (-1)`.
+- Gebruik bij **Beweging** `ga naar x: ... y: ...`.
+- Gebruik bij **Functies** van Beweging/Operators de willekeurige waarde voor de x-positie. In Scratch heet het blok `willekeurig getal tussen (1) en (10)`; stel de grenzen bijvoorbeeld in op `-220` en `220`.
+- Gebruik bij **Waarnemen** de `y-positie`-waarde en bij **Operatoren** de `<`-vergelijking.
+
+**Let op bij het bouwen:** vul bij `ga naar x: ... y: ...` als x-waarde een willekeurig getal tussen `-220` en `220` in, en als y-waarde `170`.
+
+**Test:** valt de sneeuwbal omlaag? Verschijnt hij weer bovenaan als hij onder het scherm komt?
+
+> **Begeleiderstip:** deze basisversie kan bij een botsing meerdere punten snel achter elkaar aftrekken. Voor jonge beginners kun je de botsingscode eenvoudiger maken door na de botsing `wacht (1) seconden` toe te voegen. Een nettere uitbreiding is om de sneeuwbal na een botsing even te verbergen en daarna opnieuw bovenaan te tonen.
+
+## 5. Voeg een timer toe (10 minuten)
+
+Maak bij **Variabelen** een tweede variabele: `Tijd`. Kies ook hier **Voor alle sprites**.
+
+Je kunt het timerscript op de achtergrond zetten, of op een aparte sprite met de naam `Spelbesturing`.
+
+![Nederlandse Scratch-blokken voor de timer](afbeeldingen/04-timer.svg)
+
+```text
+wanneer op groene vlag wordt geklikt
+maak [Tijd] [60]
+herhaal totdat <(Tijd) = (0)>
+    wacht (1) seconden
+    verander [Tijd] met (-1)
+zend signaal [Einde]
+```
+
+### Eindscherm tonen
+
+Kies de sprite **Piet** of maak een aparte sprite met de tekst `Einde`. Gebruik dit script:
+
+![Nederlandse Scratch-blokken voor het eindscherm](afbeeldingen/05-eindscherm.svg)
+
+```text
+wanneer ik signaal [Einde] ontvang
+zeg [Tijd is om! Goed gedaan!] gedurende (3) sec.
+stop [alle scripts]
+```
+
+**Test:** start het spel en kijk of de timer van 60 naar 0 telt. Als de tijd op is, moet het eindbericht verschijnen.
+
+**Let op:** maak het signaal `Einde` aan via het keuzemenu van het blok `zend signaal`. Kies daarna hetzelfde signaal bij `wanneer ik signaal ... ontvang`.
+
+## 6. Maak het spel persoonlijk (10 minuten)
+
+Laat de kinderen één of meer uitbreidingen kiezen:
+
+### Makkelijke extra's
+- Voeg een geluid toe als Piet een cadeau pakt.
+- Verander de achtergrond.
+- Geef Piet een andere startpositie.
+- Laat Piet iets zeggen bij het begin.
+
+### Uitdagendere extra's
+- Maak een gouden cadeau dat 5 punten waard is.
+- Laat twee sneeuwballen vallen.
+- Maak de sneeuwbal steeds sneller.
+- Voeg een tweede level toe.
+- Laat het spel eindigen als de score 10 punten is.
+
+### Startpositie van Piet
+
+Zet dit bovenaan het bewegingsscript, direct na de groene vlag:
+
+![Nederlandse Scratch-blokken voor de startpositie](afbeeldingen/06-startpositie.svg)
+
+```text
+wanneer op groene vlag wordt geklikt
+ga naar x: (0) y: (-100)
+richt naar (90) graden
+toon
+```
+
+Als je dit toevoegt, plaats dan de overige bewegingsblokken onder dezelfde startgebeurtenis. Gebruik dus niet twee aparte groene-vlag-scripts die elkaar onbedoeld beïnvloeden.
+
+## 7. Testen en presenteren (10 minuten)
+
+Laat de kinderen hun spel aan elkaar laten zien.
+
+Checklist:
+
+- [ ] Piet beweegt met de pijltjestoetsen.
+- [ ] Het cadeautje verschijnt op een willekeurige plek.
+- [ ] De score wordt hoger als Piet een cadeautje pakt.
+- [ ] De sneeuwbal valt naar beneden.
+- [ ] De score verandert bij een botsing.
+- [ ] De timer telt af.
+- [ ] Er verschijnt een eindbericht.
+
+Laat kinderen elkaar één compliment en één tip geven.
+
+---
+
+## Differentiatie: drie niveaus
+
+| Niveau | Uitdaging |
+|---|---|
+| Beginner | Piet bewegen, één cadeau verzamelen en score tonen |
+| Gemiddeld | Timer, vallende sneeuwbal en geluid toevoegen |
+| Gevorderd | Meerdere levels, steeds snellere obstakels, bonuscadeaus of tweede speler |
+
+## Afsluiting: de Sinterklaas Game Challenge
+
+Geef eventueel een paar vrolijke titels:
+
+- Creatiefste spel
+- Grappigste spel
+- Beste geluidseffect
+- Slimste programmeeroplossing
+- Mooiste Sinterklaaswereld
+
+Het doel is niet om de beste programmeur te zijn, maar om samen iets te maken en plezier te hebben!
+
+## Voor begeleiders: voorbereiding
+
+- [ ] Controleer of Scratch op alle laptops werkt.
+- [ ] Zet eventueel een voorbeeldproject klaar.
+- [ ] Test de blokken en scripts vooraf.
+- [ ] Zet de zes afbeeldingen in de map `afbeeldingen/` naast dit Markdown-bestand.
+- [ ] Zet dit bestand en de map samen in dezelfde GitHub-map.
+
+**Veel programmeerplezier! 🎁**
