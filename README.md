@@ -38,7 +38,7 @@ Klik op de sprite **Piet**. We gaan Piet met de pijltjestoetsen besturen.
 
 Bouw de blokken zoals hieronder. De vier toetsen krijgen elk hun eigen `als ... dan`-blok binnen `herhaal voortdurend`.
 
-![Nederlandse Scratch-blokken voor Piet bewegen](afbeeldingen/stap1.png)
+![Nederlandse Scratch-blokken voor Piet bewegen](afbeeldingen/stap2.png)
 
 **Test:** klik op de groene vlag. Kan Piet alle kanten op bewegen?
 
@@ -61,7 +61,7 @@ Klik op de sprite **Cadeautje**.
 
 ### Script voor het cadeautje
 
-![Nederlandse Scratch-blokken voor cadeautje en score](afbeeldingen/stap2.png)
+![Nederlandse Scratch-blokken voor cadeautje en score](afbeeldingen/stap3.png)
 
 ```text
 wanneer op groene vlag wordt geklikt
@@ -85,7 +85,7 @@ herhaal voortdurend
 
 Klik op de sprite **Sneeuwbal**. De sneeuwbal valt van boven naar beneden. Raakt hij Piet, dan verliest Piet een punt.
 
-![Nederlandse Scratch-blokken voor een vallende sneeuwbal](afbeeldingen/stap3.png)
+![Nederlandse Scratch-blokken voor een vallende sneeuwbal](afbeeldingen/stap4.png)
 
 ```text
 wanneer op groene vlag wordt geklikt
@@ -118,7 +118,7 @@ Maak bij **Variabelen** een tweede variabele: `Tijd`. Kies ook hier **Voor alle 
 
 Je kunt het timerscript op de achtergrond zetten, of op een aparte sprite met de naam `Spelbesturing`.
 
-![Nederlandse Scratch-blokken voor de timer](afbeeldingen/stap4.png)
+![Nederlandse Scratch-blokken voor de timer](afbeeldingen/stap5.png)
 
 ```text
 wanneer op groene vlag wordt geklikt
@@ -133,7 +133,7 @@ zend signaal [Einde]
 
 Kies de sprite **Piet** of maak een aparte sprite met de tekst `Einde`. Gebruik dit script:
 
-![Nederlandse Scratch-blokken voor het eindscherm](afbeeldingen/stap5.png)
+![Nederlandse Scratch-blokken voor het eindscherm](afbeeldingen/stap6.png)
 
 ```text
 wanneer ik signaal [Einde] ontvang
