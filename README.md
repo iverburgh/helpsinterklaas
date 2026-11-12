@@ -118,7 +118,7 @@ Maak bij **Variabelen** een tweede variabele: `Tijd`. Kies ook hier **Voor alle 
 
 Je kunt het timerscript op de achtergrond zetten, of op een aparte sprite met de naam `Spelbesturing`.
 
-![Nederlandse Scratch-blokken voor de timer](afbeeldingen/04-timer.svg)
+![Nederlandse Scratch-blokken voor de timer](afbeeldingen/stap4.png)
 
 ```text
 wanneer op groene vlag wordt geklikt
@@ -133,7 +133,7 @@ zend signaal [Einde]
 
 Kies de sprite **Piet** of maak een aparte sprite met de tekst `Einde`. Gebruik dit script:
 
-![Nederlandse Scratch-blokken voor het eindscherm](afbeeldingen/05-eindscherm.svg)
+![Nederlandse Scratch-blokken voor het eindscherm](afbeeldingen/stap5.png)
 
 ```text
 wanneer ik signaal [Einde] ontvang
