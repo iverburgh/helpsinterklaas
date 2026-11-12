@@ -1,56 +1,29 @@
 # 🎁 CoderDojo Scratch: Help Piet de cadeautjes bezorgen!
 
-**Leeftijd:** 8–12 jaar  
-**Duur:** 1,5 uur (90 minuten)  
-**Niveau:** beginner tot gevorderd  
-**Programma:** Scratch 3.0 — Nederlandse interface
-
-> **Over de afbeeldingen:** de afbeeldingen in `afbeeldingen/` zijn nagemaakte, screenshotachtige blokkenoverzichten. Ze laten de Nederlandse bloknamen en de volgorde zien, maar zijn geen letterlijke schermafbeeldingen uit Scratch. De precieze tekst of vorm kan per Scratch-versie iets verschillen.
-
 ## Het verhaal
 
 Het is bijna pakjesavond! Piet moet zo veel mogelijk cadeautjes verzamelen. Help Piet door een spel te programmeren waarin hij kan bewegen, cadeautjes oppakt en vallende sneeuwballen ontwijkt.
 
-## Leerdoelen
-
-Na deze opdracht hebben de kinderen geoefend met:
-
-- gebeurtenissen (starten met de groene vlag);
-- herhalen en als-dan;
-- toetsenbordbediening;
-- x- en y-coördinaten;
-- botsingen detecteren;
-- variabelen en score;
-- testen en verbeteren.
-
-## Tijdschema
-
-| Tijd | Onderdeel |
-|---|---|
-| 0–10 min | Introductie en voorbeeldspel |
-| 10–20 min | Achtergrond en sprites kiezen |
-| 20–40 min | Piet besturen |
-| 40–55 min | Cadeautjes verzamelen en score |
-| 55–70 min | Obstakel toevoegen |
-| 70–80 min | Timer en eindscherm |
-| 80–90 min | Testen en presenteren |
-
----
-
 ## 1. Start een nieuw Scratch-project (10 minuten)
 
 1. Open [Scratch](https://scratch.mit.edu/).
-2. Klik op **Creëer**.
+2. Klik op **Maak**.
 3. Verwijder de kat als je die niet wilt gebruiken.
-4. Kies een winterse achtergrond, bijvoorbeeld een besneeuwd dorp of daken.
-5. Voeg drie sprites toe:
+4. Download de achtergrond en de sprites:
+
+| sprite | Download |
+|---|---|
+| Achtergrond | [Download PNG](sprites/achtergrond.png) |
+| Piet | [Download PNG](sprites/piet.png) |
+| Cadeau | [Download PNG](sprites/cadeau.png) |
+| Sneeuwbal | [Download PNG](sprites/sneeuwbal.png) |
+
+5. Voeg een achtergrond toe, kies `Upload achtergrond` om onze eigen achtergrond te gebruiken
+
+6. Voeg drie sprites toe, kies `Upload sprite` om onze eigen sprite te gebruiken :
    - **Piet** (de speler);
    - **Cadeautje**;
    - **Sneeuwbal** (het obstakel).
-
-Je mag ook zelf sprites tekenen. Gebruik de namen `Piet`, `Cadeautje` en `Sneeuwbal`, zodat de scripts hieronder makkelijk te volgen zijn.
-
-**Tip voor begeleiders:** laat kinderen eerst een werkende basis maken. Versieren kan tussendoor of aan het einde.
 
 ## 2. Laat Piet bewegen (20 minuten)
 
@@ -191,8 +164,6 @@ stop [alle scripts]
 
 ## 6. Maak het spel persoonlijk (10 minuten)
 
-Laat de kinderen één of meer uitbreidingen kiezen:
-
 ### Makkelijke extra's
 - Voeg een geluid toe als Piet een cadeau pakt.
 - Verander de achtergrond.
@@ -220,51 +191,3 @@ toon
 ```
 
 Als je dit toevoegt, plaats dan de overige bewegingsblokken onder dezelfde startgebeurtenis. Gebruik dus niet twee aparte groene-vlag-scripts die elkaar onbedoeld beïnvloeden.
-
-## 7. Testen en presenteren (10 minuten)
-
-Laat de kinderen hun spel aan elkaar laten zien.
-
-Checklist:
-
-- [ ] Piet beweegt met de pijltjestoetsen.
-- [ ] Het cadeautje verschijnt op een willekeurige plek.
-- [ ] De score wordt hoger als Piet een cadeautje pakt.
-- [ ] De sneeuwbal valt naar beneden.
-- [ ] De score verandert bij een botsing.
-- [ ] De timer telt af.
-- [ ] Er verschijnt een eindbericht.
-
-Laat kinderen elkaar één compliment en één tip geven.
-
----
-
-## Differentiatie: drie niveaus
-
-| Niveau | Uitdaging |
-|---|---|
-| Beginner | Piet bewegen, één cadeau verzamelen en score tonen |
-| Gemiddeld | Timer, vallende sneeuwbal en geluid toevoegen |
-| Gevorderd | Meerdere levels, steeds snellere obstakels, bonuscadeaus of tweede speler |
-
-## Afsluiting: de Sinterklaas Game Challenge
-
-Geef eventueel een paar vrolijke titels:
-
-- Creatiefste spel
-- Grappigste spel
-- Beste geluidseffect
-- Slimste programmeeroplossing
-- Mooiste Sinterklaaswereld
-
-Het doel is niet om de beste programmeur te zijn, maar om samen iets te maken en plezier te hebben!
-
-## Voor begeleiders: voorbereiding
-
-- [ ] Controleer of Scratch op alle laptops werkt.
-- [ ] Zet eventueel een voorbeeldproject klaar.
-- [ ] Test de blokken en scripts vooraf.
-- [ ] Zet de zes afbeeldingen in de map `afbeeldingen/` naast dit Markdown-bestand.
-- [ ] Zet dit bestand en de map samen in dezelfde GitHub-map.
-
-**Veel programmeerplezier! 🎁**
