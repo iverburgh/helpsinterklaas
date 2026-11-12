@@ -61,13 +61,13 @@ Klik op de sprite **Cadeautje**.
 
 ### Script voor het cadeautje
 
-![Nederlandse Scratch-blokken voor cadeautje en score](afbeeldingen/02-score-cadeau.svg)
+![Nederlandse Scratch-blokken voor cadeautje en score](afbeeldingen/stap2.png)
 
 ```text
 wanneer op groene vlag wordt geklikt
 maak [Score] [0]
 ga naar willekeurige positie
-toon
+verschijn
 herhaal voortdurend
     als <raak ik [Piet]?> dan
         verander [Score] met (1)
@@ -85,7 +85,7 @@ herhaal voortdurend
 
 Klik op de sprite **Sneeuwbal**. De sneeuwbal valt van boven naar beneden. Raakt hij Piet, dan verliest Piet een punt.
 
-![Nederlandse Scratch-blokken voor een vallende sneeuwbal](afbeeldingen/03-obstakel.svg)
+![Nederlandse Scratch-blokken voor een vallende sneeuwbal](afbeeldingen/stap3.png)
 
 ```text
 wanneer op groene vlag wordt geklikt
@@ -111,8 +111,6 @@ herhaal voortdurend
 **Let op bij het bouwen:** vul bij `ga naar x: ... y: ...` als x-waarde een willekeurig getal tussen `-220` en `220` in, en als y-waarde `170`.
 
 **Test:** valt de sneeuwbal omlaag? Verschijnt hij weer bovenaan als hij onder het scherm komt?
-
-> **Begeleiderstip:** deze basisversie kan bij een botsing meerdere punten snel achter elkaar aftrekken. Voor jonge beginners kun je de botsingscode eenvoudiger maken door na de botsing `wacht (1) seconden` toe te voegen. Een nettere uitbreiding is om de sneeuwbal na een botsing even te verbergen en daarna opnieuw bovenaan te tonen.
 
 ## 5. Voeg een timer toe (10 minuten)
 
