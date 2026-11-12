@@ -38,22 +38,7 @@ Klik op de sprite **Piet**. We gaan Piet met de pijltjestoetsen besturen.
 
 Bouw de blokken zoals hieronder. De vier toetsen krijgen elk hun eigen `als ... dan`-blok binnen `herhaal voortdurend`.
 
-![Nederlandse Scratch-blokken voor Piet bewegen](afbeeldingen/01-beweging.svg)
-
-### Script voor Piet
-
-```text
-wanneer op groene vlag wordt geklikt
-herhaal voortdurend
-    als toets [pijltje rechts] ingedrukt? dan
-        verander x met (5)
-    als toets [pijltje links] ingedrukt? dan
-        verander x met (-5)
-    als toets [pijltje omhoog] ingedrukt? dan
-        verander y met (5)
-    als toets [pijltje omlaag] ingedrukt? dan
-        verander y met (-5)
-```
+![Nederlandse Scratch-blokken voor Piet bewegen](afbeeldingen/stap1.png)
 
 **Test:** klik op de groene vlag. Kan Piet alle kanten op bewegen?
 
