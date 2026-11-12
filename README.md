@@ -1,4 +1,4 @@
-# 🎁 CoderDojo Scratch: Help Piet de cadeautjes bezorgen!
+# 🎁 Help Piet de cadeautjes bezorgen!
 
 ## Het verhaal
 
@@ -13,10 +13,10 @@ Het is bijna pakjesavond! Piet moet zo veel mogelijk cadeautjes verzamelen. Help
 
 | sprite | Download |
 |---|---|
-| Achtergrond | [Download PNG](sprites/achtergrond.png) |
-| Piet | [Download PNG](sprites/piet.png) |
-| Cadeau | [Download PNG](sprites/cadeau.png) |
-| Sneeuwbal | [Download PNG](sprites/sneeuwbal.png) |
+| Achtergrond | [Download PNG](https://github.com/iverburgh/helpsinterklaas/raw/refs/heads/main/sprites/achtergrond.png) |
+| Piet | [Download PNG](https://github.com/iverburgh/helpsinterklaas/raw/refs/heads/main/sprites/piet.png) |
+| Cadeau | [Download PNG](https://github.com/iverburgh/helpsinterklaas/raw/refs/heads/main/sprites/cadeau.png) |
+| Sneeuwbal | [Download PNG](https://github.com/iverburgh/helpsinterklaas/raw/refs/heads/main/sprites/sneeuwbal.png) |
 
 5. Voeg een achtergrond toe, kies `Upload achtergrond` om onze eigen achtergrond te gebruiken
 
